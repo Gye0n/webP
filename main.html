@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>
+	웹 프로그래밍 과제
+</title>
+<style>
+	body {
+		background-color: aliceblue;
+		margin-left: 30px;
+		margin-right: 30px;
+	}
+
+	div.title {
+		color: black;
+		text-shadow : 2px 2px 3px blue;
+	}
+
+	#fixed {
+		position: fixed;
+		bottom: 15px;
+		right: 15px;
+		width: 200px;
+		padding: 10px;
+		background: ivory;
+		color: black;
+	}
+</style>
+
+<script>
+	function crossfire() {
+		document.getElementById("crossfire").src ="c://Users/user/Desktop/web/img/crossfire.png"
+	}
+
+	function lostark() {
+		document.getElementById("lostark").src ="c://Users/user/Desktop/web/img/lostark.png"
+	}
+
+	function printDate() {
+	var span = document.getElementById("date");
+	var today = new Date();
+	var str = today.getFullYear() + "년 "
+			+ (today.getMonth() + 1) + "월 "
+			+ today.getDate() + "일";
+	span.innerHTML = str;
+	}
+
+	function move() {
+		let que = confirm("로스트아크 콘서트 유튜브 페이지로 이동하시겠습니까?");
+		return que;
+	}
+
+	let timerID = null;
+
+	function cTimer(time) {
+		timerID = setTimeout("load('https://www.smilegate.com/ko/game/crossfirex.do')", time);
+	}
+	function lTimer(time) {
+		timerID = setTimeout("load('https://lostark.game.onstove.com/Promotion/Contest/220601')", time);
+	}
+
+	function cancelTimer() {
+		if(timerID != null)
+			clearTimeout(timerID);
+	}
+
+	function load(url) {
+		window.location = url;
+	}
+
+	function survey() {
+	window.open("sub2.html", "viewwin");
+	}
+
+</script>
+</head>
+
+<body onload="printDate()">
+
+	<div id="fixed">오늘 날짜 : <span id="date"></span></div>
+
+<header><div style="text-align: center">
+	<img src="c://Users/user/Desktop/web/img/logo_smilegate_ko.png" width="300" height="100" alt="스마일게이트 로고">
+</div></header>
+
+<hr>
+	<iframe src="sub1.html" name="upper" width="100%" height="100"></iframe>
+	<iframe src="https://www.smilegate.com/ko" name="lower" width="100%" height="500"></iframe><br><br>
+
+<nav>
+<h3><div class="title">목차</div>
+	<ul style="border: 1px solid black">
+		<li><a href="#history">스마일게이트의 역사</a>
+		<li><a href="#group">그룹사 설명</a>
+		<li><a href="#game">스마일게이트 게임 소개</a>
+		<li><a href="#survey">설문조사</a>
+	</ul>
+</h3></nav><br>
+
+<section>
+	<article id="history">
+		<h3><div class="title">스마일 게이트의 역사</div></h3>
+		<p> 스마일게이트는 원래 피처폰 게임을 만들던 회사였으며, 2005년 헤드샷 온라인을 개발해 야후와 계약하여 게임시장에 이름을 선보였으나, 야후 코리아가 게임 퍼블리싱 사업을 포기하며 정식 출시 되지 못한다. 이후 크로스파이어라는 게임을 제작하였으나 국내에서는 인기를 끌지 못하였다. 하지만, 중국으로 진출했는데 엄청난 인기를 끌어 4년 만에 국내 5~6대 게임 기업으로 성장하였다. 이후 스마일게이트 홀딩스로 이름을 변경한 뒤 스마일게이트 홀딩스 중심으로 회사체제를 개편하면서 지금의 스마일게이트가 만들어졌다.</p>
+	</article><br>
+
+	<article id="group">
+		<h3><div class="title">그룹사 설명</div></h3>
+		<p> 스마일 게이트는 다양한 그룹사를 가지고있다. 로고에 마우스를 올리면 무슨 일을 하는지 알 수 있다.</p>
+		
+		<details>
+			<summary>게임 분야</summary>
+			<p><table border bgcolor="gray">
+				<tr>
+					<td><img title="게임 개발, 서비스 및 크로스파이어 e스포츠 리그 주관" src="c://Users/user/Desktop/web/img/ci-entertainment.png" width="100" height="100"></td>
+					<td><img title="다양한 게임을 개발, 퍼블리싱하는 글로벌 게임 파트너" src="c://Users/user/Desktop/web/img/ci-megaport.png" width="100" height="100"></td>
+					<td><img title="글로벌 AAA RPG 개발, MMORPG 로스트아크 개발 및 서비스" src="c://Users/user/Desktop/web/img/ci-rpg.png" width="100" height="100"></td>
+					<td><img title="게임 및 엔터테인먼트 콘텐츠 발굴 및 투자" src="c://Users/user/Desktop/web/img/ci-megalab.png" width="100" height="100"></td>
+					<td><img title="차세대 게임 및 소셜 플랫폼 서비스" src="c://Users/user/Desktop/web/img/ci-stove.png" width="100" height="100"></td>
+					<td><img title="북미 서구권 대상 온라인 게임 퍼블리싱" src="c://Users/user/Desktop/web/img/ci-west.png" width="100" height="100"></td>
+					<td><img title="GOTY에 도전하는 오픈월드 게임 개발" src="c://Users/user/Desktop/web/img/ci-barcelona.png" width="100" height="100"></td>
+					<td><img title="모바일 게임 개발, 에픽세븐 개발" src="c://Users/user/Desktop/web/img/ci-supercreative.png" width="100" height="100"></td>
+				</tr>
+			</p></table>
+		</details><br>
+
+		<details>
+			<summary>IP비즈니스 & 테크 분야</summary>
+			<p><table border bgcolor="gray">
+				<tr>
+					<td><img title="경쟁력 있는 IP 발굴 및 문화 콘텐츠 사업" src="c://Users/user/Desktop/web/img/ci-holdings.png" width="100" height="100"></td>
+					<td><img title="문화 콘텐츠 IP를 발굴 및 사업화하는 IP Powerhouse" src="c://Users/user/Desktop/web/img/ci-realies.png" width="100" height="100"></td>
+					<td><img title="차세대 게임 및 소셜 플랫폼 서비스" src="c://Users/user/Desktop/web/img/ci-stove.png" width="100" height="100"></td>
+					<td><img title="재미있고 인간적인 AI 기술 개발 연구소" src="c://Users/user/Desktop/web/img/ci-ai.png" width="100" height="100"></td>
+				</tr>
+			</p></table>
+		</details><br>
+
+		<details>
+			<summary>투자 분야</summary>
+			<p><table border bgcolor="gray">
+				<tr>
+					<td><img title="숨겨진 가치를 찾아 투자하는 디자인 하우스(벤처캐피탈)" src="c://Users/user/Desktop/web/img/ci-investment.png" width="100" height="100"></td>
+					<td><img title="성장기업과 성장부동산에 투자하는 글로벌 자산운용사" src="c://Users/user/Desktop/web/img/ci-asset-management.png" width="100" height="100"></td>
+				</tr>
+			</p></table>
+		</details>
+	</article><br>
+
+	<article id="game">
+		<h3><div class="title">스마일게이트 게임 소개</div></h3>
+		<ol>게임 이름에 마우스를 올리면 로고가 나오며, 5초동안 로고에 마우스를 올리고 있으면 홈페이지로 이동합니다.
+			<br><br>
+			<li onmouseover="crossfire()">크로스파이어</li>
+			<div><img id="crossfire" src="" onmouseover=" cTimer(5000)" onmouseout="cancelTimer()"></div>
+			스마일게이트에서 개발한 온라인 FPS 게임이다. 오픈 초기에는 네오위즈, 피망에서 서비스했지만 지금은 직업 운영하고 있다.
+			국내 서비스는 먼저 선점한 타 FPS들로 인해서 흥행이 저조하였으나 베트남에서 진행된 테스트 서비스의 결과가 좋아 이를 바탕으로 중국에서 서비스를 시작하였는데 대박이 터지면서 FPS 동시 접속자 세계 1위라는 타이틀을 획득하였다. 최대 동시 접속자 수는 약 800만명이었다. 지금은 자리에서 한발짝 물러났지만 여전히 중국에서는 FPS분야의 대표마담이다.
+			여담으로 이 게임이 스마일게이트를 먹여살리고 있다는 말이 있다. 실제로 스마일게이트 수익의 90%가 이 게임이 차지했던 적도 있으며 단적으로 말하자면 스마일게이트의 적자는 이 게임 하나로 전부 메꿔졌었다고 말할 수 있다.
+			아쉽게도 한국에서 개발한 한국 게임이지만 국내에서 인기가 저조하여 2020년도에 국내서비스를 종료하게 된다.
+			<br><br><br>
+
+			<li onmouseover="lostark()">로스트아크</li>
+			<div><img id="lostark" src="" onmouseover="lTimer(5000)" onmouseout="cancelTimer()"></div>
+			스마일게이트 RPG가 개발한 쿼터뷰 액션 MMORPG다. 2014년 11월 12일 최초 공개했으며 2019년 12월 4일 정식 오픈했다. 스마일게이트라는 이름을 국내에서 알리게 된 게임이라고 할 수 있다. 흔히 국산 MMORPG의 마지막 희망이라고 불리며 국내에서 많은 인기를 가지고 있는 게임이다. 2022년 2월에 글로벌 서비스를 시작하여 글로벌 게임시장에도 도전하고 있다.
+			<br><br>
+			최근에는 KBS 교향악단, 지휘자 안두현 등 모여 <a href="https://www.youtube.com/watch?v=10okVreqe0s" onclick="return move()">콘서트</a>를 개최하기도 하였다.
+		</ol>
+		</article><br>
+</section>
+
+<footer id="survey">
+	<button type="button" value="survey" onclick="survey()">설문조사</button>
+</footer>
+
+</body>
+</html>

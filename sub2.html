@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>
+	sub2
+</title>
+</head>
+<body>
+<h1>설문조사</h1>
+방문자의 성향 수집 용도의 설문입니다. 많은 참여 부탁드립니다.
+<hr>
+
+<form>
+	<fieldset>
+		<legend>성별과 관심있는 분야를 선택해주세요.</legend>
+		성별: <input type="radio" name="sex" value="1"> 남자 <input type="radio" name="sex" value="2"> 여자<br>
+		분야: <input type="radio" name="part" value="1"> 게임 분야 <input type="radio" name="part" value="1"> IP비즈니스 & 테크 분야 <input type="radio" name="part" value="1"> 투자 분야
+	</fieldset><br>
+
+	<fieldset>
+		<legend>관심있는 그룹사를 골라주세요.(게임 분야 선택자, 중복체크 가능)</legend>
+		<input type="checkbox" value="1">엔터테인먼트 <input type="checkbox" value="2">메가포트 <input type="checkbox" value="3">RPG <input type="checkbox" value="4">메가랩 <input type="checkbox" value="5">스토브 <input type="checkbox" value="6">웨스트 <input type="checkbox" value="7">바르셀로나 <input type="checkbox" value="8">슈퍼크리에이티브
+	</fieldset><br>
+
+	<fieldset>
+		<legend>관심있는 그룹사를 골라주세요.(IP비즈니스 & 테크 분야 선택자, 중복체크 가능)</legend>
+		<input type="checkbox" value="1">Holdings <input type="checkbox" value="2">Realies <input type="checkbox" value="3">스토브 <input type="checkbox" value="4">AI
+	</fieldset><br>
+
+	<fieldset>
+		<legend>관심있는 그룹사를 골라주세요.(투자 분야 선택자, 중복체크 가능)</legend>
+		<input type="checkbox" value="1">Investment <input type="checkbox" value="2">Asset-Management
+	</fieldset><br>
+	
+	기타 의견 사항<br>
+<textarea cols="50" rows="5" placeholder="기타 의견을 남겨주세요.">
+</textarea><br>
+
+<button type="submit">확인</button> <button type="reset">취소</button>
+</body>
+</html>
